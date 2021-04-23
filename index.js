@@ -19,3 +19,6 @@ app.post('/profile/single', upload.single('avatar'), function (req, res, next) {
 app.post('/profile/multiple', upload.array('avatar'), function (req, res, next) {
   console.log({file:req.files,body:req.body})
 })
+app.get('/download',(req,res)=>{
+  res.download(__dirname+'/uploads/contoh file yang berhasil di upload.pdf.txt')
+})
